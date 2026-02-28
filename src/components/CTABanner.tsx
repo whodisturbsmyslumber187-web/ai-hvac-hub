@@ -15,11 +15,11 @@ const CTABanner = () => (
           Ready to Get Started?
         </h2>
         <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8 text-lg">
-          Book your free inspection today and discover how we can improve your comfort and save on energy costs.
+          Contact us today and discover how we can improve your comfort and save on energy costs.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button variant="secondary" size="xl" className="text-foreground">
-            Book Free Inspection
+            Contact Now
             <ArrowRight className="w-5 h-5" />
           </Button>
           <Button variant="outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">

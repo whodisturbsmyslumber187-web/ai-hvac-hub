@@ -27,16 +27,16 @@ const LeadCaptureSection = () => {
           >
             <span className="text-electric text-sm font-semibold tracking-widest uppercase mb-4 block">Get Started</span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-6">
-              Get Your Free<br />
-              <span className="gradient-text-electric">Estimate Today</span>
+              Get Your<br />
+              <span className="gradient-text-electric">Quote Today</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Fill out the form and one of our certified HVAC specialists will contact you within 1 hour 
-              with a detailed, no-obligation quote.
+              with a detailed, competitive quote.
             </p>
             <div className="space-y-4">
               {[
-                "Free in-home or on-site assessment",
+                "Professional on-site assessment",
                 "Transparent pricing — no hidden fees",
                 "Financing options available",
                 "Same-day emergency service",
@@ -62,7 +62,7 @@ const LeadCaptureSection = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-card border border-border rounded-xl p-8 space-y-4 shadow-lg">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Request a Free Quote</h3>
+                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Request a Quote</h3>
                 <Input placeholder="Full Name" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
                 <div className="grid grid-cols-2 gap-4">
                   <Input type="email" placeholder="Email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />

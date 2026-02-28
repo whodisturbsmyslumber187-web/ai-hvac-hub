@@ -140,7 +140,7 @@ const MaintenancePricing = () => (
       {/* Trust row */}
       <div className="flex flex-wrap justify-center gap-8 mt-12">
         {[
-          { icon: Shield, text: "No contracts — cancel anytime" },
+          { icon: Shield, text: "Flexible plans — cancel anytime" },
           { icon: Wrench, text: "All work by certified technicians" },
           { icon: Zap, text: "Average $400/year savings" },
         ].map(({ icon: Icon, text }) => (

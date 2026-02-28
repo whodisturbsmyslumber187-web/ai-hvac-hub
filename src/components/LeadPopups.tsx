@@ -142,7 +142,7 @@ export const ExitIntentPopup = () => {
         </button>
         <h3 className="font-display font-bold text-xl text-foreground mb-2 text-center">Wait! Don't Leave Yet</h3>
         <p className="text-muted-foreground text-sm text-center mb-6">
-          Get a <span className="text-electric font-bold">FREE furnace inspection</span> ($149 value) when you book today!
+          Speak with an <span className="text-electric font-bold">HVAC specialist today</span> — get a competitive quote in minutes!
         </p>
         <form onSubmit={handleSubmit} className="space-y-3">
           <Input
@@ -153,7 +153,7 @@ export const ExitIntentPopup = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <Button type="submit" variant="hero" className="w-full">
-            Get My Free Inspection
+            Contact a Specialist
           </Button>
         </form>
       </motion.div>

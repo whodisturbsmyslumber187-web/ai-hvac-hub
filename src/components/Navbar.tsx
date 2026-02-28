@@ -50,7 +50,7 @@ const Navbar = () => {
             <span className="font-medium">1-800-555-1234</span>
           </a>
           <Button variant="hero" size="default">
-            Get Free Quote
+            Contact Now
           </Button>
         </div>
 
@@ -83,7 +83,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-2">
-                Get Free Quote
+                Contact Now
               </Button>
               <a href="tel:+18005551234" className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
