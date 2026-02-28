@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import commercialImg from "@/assets/commercial-bright.webp";
+import teamImg from "@/assets/team-van.webp";
 import techImg from "@/assets/technician-friendly.webp";
 
 const highlights = [
@@ -52,8 +52,8 @@ const AboutSection = () => (
         >
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={commercialImg}
-              alt="Commercial HVAC systems on building rooftop"
+              src={teamImg}
+              alt="Our professional HVAC team"
               className="rounded-xl w-full h-56 lg:h-72 object-cover shadow-lg"
               loading="lazy"
             />

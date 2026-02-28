@@ -53,7 +53,7 @@ const HeroSection = () => (
 
           <div className="flex flex-wrap gap-4">
             <Button variant="hero" size="xl">
-              Get a Free Quote
+              Contact Us Now
             </Button>
             <Button variant="emergency" size="xl">
               <Phone className="w-5 h-5" />
