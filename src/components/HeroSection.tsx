@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Clock, Award, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-residential.webp";
+import heroImg from "@/assets/hero-bright.webp";
 
 const badges = [
   { icon: Award, label: "40+ Years" },
@@ -11,15 +11,15 @@ const badges = [
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-    {/* Background image */}
+    {/* Background image - bright and visible */}
     <div className="absolute inset-0">
-      <img src={heroImg} alt="Professional HVAC installation" className="w-full h-full object-cover" loading="eager" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+      <img src={heroImg} alt="Beautiful Canadian home with HVAC system" className="w-full h-full object-cover" loading="eager" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/30" />
     </div>
 
-    {/* Glow orb */}
-    <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-electric/10 rounded-full blur-[120px] pointer-events-none" />
+    {/* Subtle accent orb */}
+    <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-electric/5 rounded-full blur-[120px] pointer-events-none" />
 
     <div className="container relative z-10">
       <div className="max-w-3xl">
@@ -39,7 +39,7 @@ const HeroSection = () => (
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
-            <span className="gradient-text">Canada's Trusted</span>
+            <span className="text-foreground">Canada's Trusted</span>
             <br />
             <span className="gradient-text-electric">HVAC Experts</span>
             <br />

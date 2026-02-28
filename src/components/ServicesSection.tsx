@@ -3,6 +3,7 @@ import {
   Flame, Snowflake, Wind, Wrench, Thermometer, Zap,
   Building2, Factory, Fan, BarChart3, Settings, Leaf,
 } from "lucide-react";
+import thermostatImg from "@/assets/smart-thermostat.webp";
 
 const residential = [
   { icon: Flame, title: "Furnace Installation", desc: "High-efficiency furnaces for Canadian winters." },
@@ -40,7 +41,6 @@ const ServiceCard = ({ icon: Icon, title, desc, index }: { icon: any; title: str
 
 const ServicesSection = () => (
   <section id="services" className="section-padding relative">
-    <div className="absolute top-0 left-1/2 w-80 h-80 bg-electric/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/2" />
     <div className="container relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -49,8 +49,8 @@ const ServicesSection = () => (
         className="text-center mb-16"
       >
         <span className="text-electric text-sm font-semibold tracking-widest uppercase mb-4 block">Our Services</span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold gradient-text mb-4">
-          Complete HVAC Solutions
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          Complete <span className="gradient-text-electric">HVAC Solutions</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           From single-room cooling to industrial climate control — we deliver expert service for every need.
@@ -60,21 +60,36 @@ const ServicesSection = () => (
       {/* Residential */}
       <div className="mb-16">
         <h3 className="font-display font-semibold text-xl text-foreground mb-6 flex items-center gap-2">
-          <Flame className="w-5 h-5 text-electric" /> Residential
+          <Flame className="w-5 h-5 text-electric" /> Residential Services
         </h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {residential.map((s, i) => <ServiceCard key={s.title} {...s} index={i} />)}
         </div>
       </div>
 
-      {/* Commercial */}
-      <div>
-        <h3 className="font-display font-semibold text-xl text-foreground mb-6 flex items-center gap-2">
-          <Building2 className="w-5 h-5 text-electric" /> Commercial
-        </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {commercial.map((s, i) => <ServiceCard key={s.title} {...s} index={i} />)}
+      {/* Commercial with image */}
+      <div className="grid lg:grid-cols-4 gap-6">
+        <div className="lg:col-span-3">
+          <h3 className="font-display font-semibold text-xl text-foreground mb-6 flex items-center gap-2">
+            <Building2 className="w-5 h-5 text-electric" /> Commercial Services
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {commercial.map((s, i) => <ServiceCard key={s.title} {...s} index={i} />)}
+          </div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="hidden lg:block"
+        >
+          <img
+            src={thermostatImg}
+            alt="Smart thermostat in modern home"
+            className="rounded-xl w-full h-full object-cover shadow-lg max-h-[400px]"
+            loading="lazy"
+          />
+        </motion.div>
       </div>
     </div>
   </section>
