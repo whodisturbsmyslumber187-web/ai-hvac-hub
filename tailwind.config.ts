@@ -86,9 +86,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        glow: "0 0 30px hsl(210 100% 56% / 0.15)",
-        "glow-lg": "0 0 60px hsl(210 100% 56% / 0.2)",
-        "glow-xl": "0 0 100px hsl(210 100% 56% / 0.25)",
+        glow: "0 0 30px hsl(212 100% 47% / 0.15)",
+        "glow-lg": "0 0 60px hsl(212 100% 47% / 0.2)",
+        "glow-xl": "0 0 100px hsl(212 100% 47% / 0.2)",
       },
       keyframes: {
         "accordion-down": {

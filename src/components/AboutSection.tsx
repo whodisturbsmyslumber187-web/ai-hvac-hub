@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import commercialImg from "@/assets/hero-commercial.webp";
+import commercialImg from "@/assets/commercial-bright.webp";
+import techImg from "@/assets/technician-friendly.webp";
 
 const highlights = [
   "Family-owned & operated since 1984",
@@ -13,7 +14,6 @@ const highlights = [
 
 const AboutSection = () => (
   <section id="about" className="section-padding relative overflow-hidden">
-    <div className="absolute bottom-0 right-0 w-96 h-96 bg-electric/5 rounded-full blur-[120px] pointer-events-none" />
     <div className="container relative z-10">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <motion.div
@@ -23,8 +23,9 @@ const AboutSection = () => (
           transition={{ duration: 0.7 }}
         >
           <span className="text-electric text-sm font-semibold tracking-widest uppercase mb-4 block">About Us</span>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold gradient-text mb-6">
-            Four Decades of<br />Trusted Excellence
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-6">
+            Four Decades of<br />
+            <span className="gradient-text-electric">Trusted Excellence</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-8">
             Since 1984, ArcticComfort has been the name Canadians trust for reliable HVAC solutions. 
@@ -49,18 +50,24 @@ const AboutSection = () => (
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="glass-card p-2 rounded-2xl">
+          <div className="grid grid-cols-2 gap-4">
             <img
               src={commercialImg}
               alt="Commercial HVAC systems on building rooftop"
-              className="rounded-xl w-full h-80 lg:h-[28rem] object-cover"
+              className="rounded-xl w-full h-56 lg:h-72 object-cover shadow-lg"
+              loading="lazy"
+            />
+            <img
+              src={techImg}
+              alt="Friendly HVAC technician"
+              className="rounded-xl w-full h-56 lg:h-72 object-cover shadow-lg mt-8"
               loading="lazy"
             />
           </div>
           {/* Floating stat */}
-          <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl shadow-glow-lg">
-            <p className="text-3xl font-display font-bold text-electric">40+</p>
-            <p className="text-sm text-muted-foreground">Years in Business</p>
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 glass-card p-5 rounded-xl shadow-glow">
+            <p className="text-3xl font-display font-bold text-electric text-center">40+</p>
+            <p className="text-sm text-muted-foreground text-center">Years in Business</p>
           </div>
         </motion.div>
       </div>

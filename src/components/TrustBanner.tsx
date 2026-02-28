@@ -9,7 +9,7 @@ const items = [
 ];
 
 const TrustBanner = () => (
-  <section className="py-8 border-y border-border/30 bg-secondary/30">
+  <section className="py-8 border-y border-border bg-card">
     <div className="container">
       <div className="flex flex-wrap justify-center gap-8 md:gap-16">
         {items.map(({ icon: Icon, label }, i) => (
@@ -19,7 +19,7 @@ const TrustBanner = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="flex items-center gap-3 text-muted-foreground"
+            className="flex items-center gap-3 text-foreground"
           >
             <Icon className="w-5 h-5 text-electric" />
             <span className="text-sm font-medium">{label}</span>

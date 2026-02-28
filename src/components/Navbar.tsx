@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Maintenance Plans", href: "#maintenance" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
@@ -18,7 +19,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/50"
+      className="fixed top-8 left-0 right-0 z-50 glass-card border-b border-border/50"
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center gap-2">
@@ -36,7 +37,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium"
+              className="text-sm text-muted-foreground hover:text-electric transition-colors duration-300 font-medium"
             >
               {link.label}
             </a>
@@ -68,7 +69,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-card border-t border-border/50"
+            className="lg:hidden border-t border-border/50 bg-card"
           >
             <div className="container py-6 flex flex-col gap-4">
               {navLinks.map((link) => (

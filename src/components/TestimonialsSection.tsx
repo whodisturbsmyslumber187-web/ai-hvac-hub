@@ -23,9 +23,8 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section id="testimonials" className="section-padding relative">
-    <div className="absolute top-1/2 left-0 w-72 h-72 bg-electric/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2" />
-    <div className="container relative z-10">
+  <section id="testimonials" className="section-padding bg-secondary/50">
+    <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,8 +32,8 @@ const TestimonialsSection = () => (
         className="text-center mb-16"
       >
         <span className="text-electric text-sm font-semibold tracking-widest uppercase mb-4 block">Testimonials</span>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold gradient-text mb-4">
-          Trusted by Thousands
+        <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+          Trusted by <span className="gradient-text-electric">Thousands</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
           Hear from the families and businesses that count on us year after year.
@@ -49,14 +48,14 @@ const TestimonialsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="glass-card-hover p-6 flex flex-col"
+            className="bg-card rounded-xl border border-border p-6 flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300"
           >
             <div className="flex gap-1 mb-4">
               {Array.from({ length: t.rating }).map((_, j) => (
                 <Star key={j} className="w-4 h-4 fill-warning text-warning" />
               ))}
             </div>
-            <p className="text-sm text-foreground/90 leading-relaxed mb-6 flex-1">"{t.text}"</p>
+            <p className="text-sm text-foreground leading-relaxed mb-6 flex-1">"{t.text}"</p>
             <div>
               <p className="font-display font-semibold text-foreground text-sm">{t.name}</p>
               <p className="text-xs text-muted-foreground">{t.role}</p>
